@@ -3,13 +3,13 @@ Fletcher Bach 2015
  Averages pixel r, g, and b values from a series of source images.  
 */
 
-PImage sourceImgs[] = new PImage[30];
+PImage sourceImgs[] = new PImage[240];
 
 void setup() {
-  size(500,500); // source images must be the exact same pixel dimensions as canvas size!
-  loadSrcImgs();  //loads source images into array from data folder
-  getPixelVals(); //gets pixel values from each image
-  saveImage();    //saves new image made from average of pixel values
+  size(500,500); // note: source images must be the exact same pixel dimensions as canvas size!
+  loadSrcImgs();  //loading source images into array from data folder
+  getPixelVals(); //getting pixel values from each image
+  saveImage();    //saving new image made from average of pixel values
 }
 
 void draw() {
@@ -24,19 +24,11 @@ void loadSrcImgs() {
 
 void getPixelVals() {
   loadPixels(); 
-
-  //sourceImgs[0].loadPixels(); 
   
   for (int y = 0; y < height; y++) {
     for (int x = 0; x < width; x++) {
       int loc = x + y*width;
 
-      //for(int i = 0; i < sourceImgs.length; i++){
-
-      // The functions red(), green(), and blue() pull out the 3 color components from a pixel.
-      //      float r = red(sourceImgs[i].pixels[loc]);
-      //      float g = green(sourceImgs[i].pixels[loc]);
-      //      float b = blue(sourceImgs[i].pixels[loc]);
       
       // totals across all images
       float rTotal = 0;
