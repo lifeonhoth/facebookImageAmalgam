@@ -3,7 +3,7 @@ Fletcher Bach 2015
  Averages pixel r, g, and b values from a series of source images.  
 */
 
-PImage sourceImgs[] = new PImage[169]; 
+PImage sourceImgs[] = new PImage[169]; //adjust array size to match amount of source images
 
 void setup() {
   size(500,500); // note: source images must be the exact same pixel dimensions as canvas size!
